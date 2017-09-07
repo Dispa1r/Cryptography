@@ -4,6 +4,9 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{seqsplit}
+\usepackage{mathtools}
+\usepackage{hyperref}
 \renewcommand\qedsymbol{$\blacksquare$}
 \usepackage{enumerate}
 
@@ -26,25 +29,6 @@ Math 314 \\  %class
 \noindent\textbf{Problem 1:} In a symmetric cryptosystem, Alice and Bob both know the e-key and the d-key. The cryptosystem is assumed to  have no weakness and Alice and Bob are the only persons that ever know the secret keys. Alice sends some message m to Bob. Is it possible for Bob to prove to a judge that he really has received m from Alice (in other words, does a symmetric cryptosystem offer non-repudiation)? Say YES or NO and give a short and clear explanation.
 
 \bigskip  Solution: A symmetric cryptosystem does not offer non-repudiation, meaning it does not provide authenticity unless an encrypted mode of operation is used. The shared e-key and d-key does not provide integrity, a message can be sent by an attacker, the receiver will decrypt and accept without knowing who encrypted it and/or legitimacy of the sender.
-
-\bigskip
-\noindent\textbf{Problem 2 Ex.2:} The ciphertext U C R was encrypted using the affine function 9x + 2 mod 26. Find the plaintext.
-\bigskip
-
-\indent First, we must find the decryption function:
- $y = 9x + 2$
-$y - 2 = 9x$
-$x = 9^-1(y - 2)$
-$x = 3(y - 2)$
-
-\noindent\ Now, we plug in each character:
-\begin{itemize}
-\item U = 20: $3*20 - 2 = 58 (mod 26) = 6$
-\item C = 2: $3*2 - 2 = 4$
-\item R = 17: $3*17 - 2 = 49 (mod 26) = 23$
-\end{itemize}
-
-So, the ciphertext U C R is decrypted to G E X
 
 \bigskip
 \noindent\textbf{Problem 2 Ex.3:} Encrypt howareyou using the affine function 5x + 7 (mod 26). What is
@@ -112,24 +96,30 @@ using hahaha. The ciphertext is NONONO. Determine the encryption function.
 \bigskip
 \indent\ SQJRU UBEJN BAQJW BHEPS QBEFT PWJSQ RERTP EPRIA RCJSB NHDCH SBSDS BPEHB ENJJR NQAIR BESJK SNQRW RNSJW BHTRA AJYSP PEIVP EJNBA QJWSJ KSNQR WRNSJ WRHRW JHDIS SQJHR TJSPP IHSQR SHPIO JYSQJ XJVZP WYNBA QJWNP DIYCJ RAAIB JYSPS QJRUU BEJNB AQJWS QJPEI VYBUU JWJEN JBHSQ RSSQJ XJVHD CHSBS DSBPE ARSSJ WEBHE PSCRH JYPER XJVZP WY
 
-\indent\ Solution: Using frequency analysis the letter J appeared 35 times, or 13.11 percent of the entire cipher text. The letter S appears 32 times or 11.99 percent of the entire cipher text. Using deductive reasoning we can say that either the letter J or S will map to the letter E. Going with proven statistical data I will make the first guess of mapping J to E and S to T because they are the two most recurring letters in the English language. 
-Now, we have enough information to try and find the alpha and beta values:
-Encrypting E to J: $4*\alpha + \beta = 9$
-Use this to find beta: $4*(18-\beta)*11+\beta = 9$
-$792 -43\beta = 9$
-$\beta = 17$
-Now, use the other equation with the beta value to find alpha
-Encrypting T to S: $19*\alpha + \beta = 18$
-$19*\alpha + 17 = 18$
-$19*\alpha = 1$
-$\alpha = 11$
-Now, we have  both alpha and beta values, giving us the encryption equation: $11x + 17 = y$ 
-This makes the decryption equation $x = (y - 17)*19$
-Using this gives us the plaintext:
-THEAF FINEC IPHER ISNOT HINGM ORETH ANAMO NOALP ABETI CSUBS TITUT IONSI NCEEA CHPLA INTEX TCHAR ACTER ISMAP PEDTO ONLYO NECIP HERTE XTCHA RACTE RASAR ESULT THESA METOO LSTHA TSOLV EDTHE KEYWO RDCIP HERCO ULDBE APPLI EDTOT HEAFF INECI PHERT HEONL YDIFF ERENC EISTH ATTHE KEYSU BSTIT UTION PATTE RNISN OTBAS EDONA KEYWO RD
-Tools used: 
-https://www.mtholyoke.edu/courses/quenell/s2003/ma139/js/count.html to count the frequency of each letter
-http://crypto.interactive-maths.com/affine-cipher.html to apply the decryption to each letter
+\indent\ Solution: Using frequency analysis the letter J appeared 35 times, or 13.11 percent of the entire cipher text. The letter S appears 32 times or 11.99 percent of the entire cipher text. Using deductive reasoning we can say that either the letter J or S will map to the letter E. Going with proven statistical data I will make the first guess of mapping J to E and S to T because they are the two most recurring letters in the English language. We'll will use their corresponding number order in the alphabet to create two arguments to find the decryption function. 
+
+
+
+\begin{alignat*}{4}
+    &9&\equiv&&4\alpha&+&\beta (mod26)\\   
+    -\hspace*{.5em}&18&\equiv&&19\alpha&+&\beta (mod 26)\\[-2.5ex]\cline{2-8}\\[-4.8ex]
+    &17&=&&11\alpha && (mod 26)
+\end{alignat*}
+
+$ \alpha \equiv 17 * 11^{-1} (mod 26) \Longrightarrow$
+$ 19 \equiv 11^{-1} (mod 26) \Longrightarrow$
+$19 * 17 (mod 26) \equiv 11 \Longrightarrow \alpha = 11.$
+\bigskip
+
+\noindent So we plug $\alpha$ into one of the arguments above and solve for $\beta$ this time. 
+We find that $\beta = 17$. The decryption function is $y = 11x + 17$. The decrypted text is:
+
+\seqsplit{theaffinecipherisnothingmorethanamonoalpabeticsubstitutionsinceeachplaintextcharacterismappedtoonlyoneciphertextcharacterasaresultthesametoolsthatsolvedthekeywordciphercouldbeappliedtotheaffineciphertheonlydifferenceisthatthekeysubstitutionpatternisnotbasedonakeyword}.
+
+\bigskip
+
+We used \href{http://www.dcode.fr/frequency-analysis}{this for a frequency analysis tool}. (Click on frequency).
+
 
 
 

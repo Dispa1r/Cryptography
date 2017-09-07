@@ -1,0 +1,100 @@
+\documentclass[12pt,letterpaper,final]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\renewcommand\qedsymbol{$\blacksquare$}
+\usepackage{enumerate}
+
+%\author{Marius Zimand}
+
+\begin{document}
+\fbox{
+\vbox{
+\begin{flushleft}
+Anna Cooper, John Smith, Nick Curly \\  % authors' names
+Math 314 \\  %class
+9/10/16 \\  % date
+\end{flushleft}
+\center{\Large{\textbf{Assignment 1}}}
+}  % end vbox
+} % end fbox
+
+\vline
+
+
+\noindent\textbf{Problem 1:}  Here is the solution for problem 1.
+
+Mathematical text is written like this $a+b = c$.
+
+This is how we can have subscripts and superscripts: $a^2 + b^2 = c^2 + d_1$.
+
+This is how we can write math equations on a separate line:
+\[
+a+b = c^2 + \log n.
+\]
+This is how we can write multi-line math equations on a separate line:
+\[
+\begin{array}{ll}
+a+b & = c^2 + \log n \\
+&\leq 5d + \sin x \\
+& = A.
+\end{array}
+\]
+Matrices can be written like this:
+\[
+A = 
+\begin{bmatrix}
+1 & a & b \\
+2 & a^2 & b^3 \\
+3 & a_3 & b_5
+\end{bmatrix}
+\]
+\smallskip
+
+This is how to make a table:
+\medskip
+
+\begin{tabular}{|c|c|c|}
+\hline
+$\delta$ & $a$ & $x$ \\
+\hline
+$q_{1}$ & $q_{1}$ & $ b$ \\
+$q_{2}$ & $q_{1}$ & $ c$ \\
+$q_{3}$ & $q_{2}$ & $ b$ \\
+$q_{4}$ & $q_{3}$ & $ c$ \\
+$q_{5}$ & $q_{4}$ & $ b$ \\
+\hline
+\end{tabular}
+\medskip
+
+Greek letters are easy to write: $\alpha$, $\beta$, $\gamma$, $\theta$, $\Theta$, $\omega$, $\Omega$, and so on. 
+\bigskip
+
+To make latex produce the text exactly how we type, we can use the verbatim environment. This is useful for example to write an algorithm in pseudo-code. Below is a short example.
+
+\begin{verbatim}
+s = 0
+for i going from 1 to n
+
+   s= s+ a[i]
+
+end-for
+\end{verbatim}
+\noindent\textbf{Problem 2:} Here is the solution for problem 2.....
+
+
+
+
+
+\bigskip
+
+\noindent\textbf{Problem 3:} Here is the solution for problem 3. ...
+
+
+\bigskip
+
+\noindent\textbf{Problem 4:}  Here is the solution for problem 4. ...
+
+\end{document}
