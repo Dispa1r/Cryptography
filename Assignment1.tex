@@ -28,6 +28,25 @@ Math 314 \\  %class
 \bigskip  Solution: A symmetric cryptosystem does not offer non-repudiation, meaning it does not provide authenticity unless an encrypted mode of operation is used. The shared e-key and d-key does not provide integrity, a message can be sent by an attacker, the receiver will decrypt and accept without knowing who encrypted it and/or legitimacy of the sender.
 
 \bigskip
+\noindent\textbf{Problem 2 Ex.2:} The ciphertext U C R was encrypted using the affine function 9x + 2 mod 26. Find the plaintext.
+\bigskip
+
+\indent First, we must find the decryption function:
+ $y = 9x + 2$
+$y - 2 = 9x$
+$x = 9^-1(y - 2)$
+$x = 3(y - 2)$
+
+\noindent\ Now, we plug in each character:
+\begin{itemize}
+\item U = 20: $3*20 - 2 = 58 (mod 26) = 6$
+\item C = 2: $3*2 - 2 = 4$
+\item R = 17: $3*17 - 2 = 49 (mod 26) = 23$
+\end{itemize}
+
+So, the ciphertext U C R is decrypted to G E X
+
+\bigskip
 \noindent\textbf{Problem 2 Ex.3:} Encrypt howareyou using the affine function 5x + 7 (mod 26). What is
 the decryption function? Check that it works.
 
