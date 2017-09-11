@@ -40,18 +40,15 @@ is encrypted using a Vigenere cipher (working mod 2 instead of mod
 	\item Show that the key length is probably 2.
 	\item Using the information on the frequencies of the letters, determine the key and decrypt the message.
 \end{alphalist}
-
-
-
 \bigskip  Solution: We will start by displaying different levels of displacement in hopes of finding a high number of coincidences. \\
-Displacement of 1:  \indent\indent \textit BABABAAABA \\
-\phantom{BBBBBBBBBB}  \indent\indent \textit BABABAAABA \\
+Displacement of 1:  \indent\indent \textit{BABABAAABA} \\
+\phantom{BBBBBBBBBB}  \indent\indent \textit{BABABAAABA} \\
 Number of coincidences: 2 \\\\
-Displacement of 2:  \indent\indent \textit BABABAAABA \\
-\phantom{BBBBBBBBB}  \indent\indent \textit BABABAAABA \\
-Number of coincidences: 7 \\ This is most likely going to be the key length: (Key = 2) due to the high number of frequencies.\\
-Displacement of 3: \indent\indent \textit BABABAAABA \\
-\phantom{BBBBBBBB} \indent\indent \textit BABABAAABA \\
+Displacement of 2:  \indent\indent \textit{BABABAAABA} \\
+\phantom{BBBBBBBBB}  \indent\indent \textit{BABABAAABA} \\
+Number of coincidences: 7 \\ This is most likely going to be the key length: (Key = 2) due to the high number of frequencies.\\\\
+Displacement of 3: \indent\indent \textit{BABABAAABA} \\
+\phantom{BBBBBBBB} \indent\indent \textit{BABABAAABA} \\
 Number of coincidences: 2 \\\\
 So, 7 coincidences will be the highest amount we find. Meaning, we will further analyze every second letter in the cipher-text, starting at the first letter. With the highest percentage of B(.9) occurring most frequently (4 times) compared to A(.1) occurring \textbf{ONCE} we will assume that the first number in our key is 0. Next, analyze every second letter, starting at the second letter. \textit A occurs 5 times and \textit B zero times. We can conclude the second number in the key is 1. So the key is $\left\{0,1 \right\}$.
 
