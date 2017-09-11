@@ -29,7 +29,7 @@ Math 314 \\  %class
 
 
 \noindent\textbf{Problem 1: Exercise 10, page 56}
- (to convert to numbers, use a=0, b=1). Suppose there is a language that has only the letters a and b. The frequency of the letter a is .1 and the frequency of 6 is .9. A message
+ (to convert to numbers, use a=0, b=1). Suppose there is a language that has only the letters a and b. The frequency of the letter \textit a is .1 and the frequency of \textit b is .9. A message
 is encrypted using a Vigenere cipher (working mod 2 instead of mod
 26). The ciphertext is BABABAAABA.
 
@@ -43,7 +43,18 @@ is encrypted using a Vigenere cipher (working mod 2 instead of mod
 
 
 
-\bigskip  Solution: 
+\bigskip  Solution: We will start by displaying different levels of displacement in hopes of finding a high number of coincidences. \\
+Displacement of 1:  \indent\indent \textit BABABAAABA \\
+\phantom{BBBBBBBBBB}  \indent\indent \textit BABABAAABA \\
+Number of coincidences: 2 \\\\
+Displacement of 2:  \indent\indent \textit BABABAAABA \\
+\phantom{BBBBBBBBB}  \indent\indent \textit BABABAAABA \\
+Number of coincidences: 7 \\ This is most likely going to be the key length: (Key = 2) due to the high number of frequencies.\\
+Displacement of 3: \indent\indent \textit BABABAAABA \\
+\phantom{BBBBBBBB} \indent\indent \textit BABABAAABA \\
+Number of coincidences: 2 \\\\
+So, 7 coincidences will be the highest amount we find. Meaning, we will further analyze every second letter in the cipher-text, starting at the first letter. With the highest percentage of B(.9) occurring most frequently (4 times) compared to A(.1) occurring \textbf{ONCE} we will assume that the first number in our key is 0. Next, analyze every second letter, starting at the second letter. \textit A occurs 5 times and \textit B zero times. We can conclude the second number in the key is 1. So the key is $\left\{0,1 \right\}$.
+
 
 \bigskip
 \noindent\textbf{Problem 2: Exercise 13, page 56} (if you want to compute the inverse of the matrix, see section 3.8). The ciphertext YIFZM A was encrypted by a Hill cipher with the matrix \[\begin{bmatrix} 9 &13 \\ 2 & 3   \\ \end{bmatrix} \] \\ Find the plaintext. 
