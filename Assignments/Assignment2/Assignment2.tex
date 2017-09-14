@@ -31,7 +31,7 @@ Math 314 \\  %class
 \noindent\textbf{Problem 1: Exercise 10, page 56}
  (to convert to numbers, use a=0, b=1). Suppose there is a language that has only the letters a and b. The frequency of the letter \textit a is .1 and the frequency of \textit b is .9. A message
 is encrypted using a Vigenere cipher (working mod 2 instead of mod
-26). The ciphertext is BABABAAABA.
+26). The ciphertext is BABABAAABA. 
 
 \bigskip
 \newlist{alphalist}{enumerate}{1}
@@ -50,7 +50,7 @@ Number of coincidences: 7 \\ This is most likely going to be the key length: (Ke
 Displacement of 3: \indent\indent \textit{BABABAAABA} \\
 \phantom{BBBBBBBB} \indent\indent \textit{BABABAAABA} \\
 Number of coincidences: 2 \\\\
-So, 7 coincidences will be the highest amount we find. Meaning, we will further analyze every second letter in the cipher-text, starting at the first letter. With the highest percentage of B(.9) occurring most frequently (4 times) compared to A(.1) occurring \textbf{ONCE} we will assume that the first number in our key is 0. Next, analyze every second letter, starting at the second letter. \textit A occurs 5 times and \textit B zero times. We can conclude the second number in the key is 1. So the key is $\left\{0,1 \right\}$.
+So, 7 coincidences will be the highest amount we find. Meaning, we will further analyze every second letter in the cipher-text, starting at the first letter. With the highest percentage of B(.9) occurring most frequently (4 times) compared to A(.1) occurring \textbf{ONCE} we will assume that the first number in our key is 0. Next, analyze every second letter, starting at the second letter. \textit A occurs 5 times and \textit B zero times. We can conclude the second number in the key is 1. So the key is $\left\{0,1 \right\}$. The message decrypts to \textit{BBBBBBABBB}.
 
 
 \bigskip
@@ -106,7 +106,8 @@ Since the given cipher-text/plaintext pair has 6 letters, you can form 6 equatio
 \bigskip
 \indent Solution: 
 \bigskip
-Using  my program, I found that a displacement of 6 had a greater number of coincidences. so it was assumed to be the key length. To find the key I then used the keylength to split the ciphertext into 6 sections and did a frequency attack on each one.
+
+Using  my program, I found that a displacement of 6 had a greater number of coincidences. so it was assumed to be the key length. To find the key I then used the key length to split the cipher-text into 6 sections and did a frequency attack on each one.
  The most frequent letters for each section were found to be u, b, d, q, i, and g for each respective section. Assuming each one to correspond to e in the plaintext, the key would be 10, 3, 1, 14, 22, 24. This gives the plaintext:
 \bigskip
 \newline qxzmecqjrbeowbsatomocrsyvnvoubbrbsivnwqewscqvisvxwuthswkockmdaje 
