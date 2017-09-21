@@ -68,6 +68,10 @@ $4$ & $ b/5$ & $ b/5$ & $ b/5$ & $ b/5$ & $ b/5$ \\
 \hline
 \end{tabular}
 
+\bigskip\newline
+$P (M=2 | C = 4) = \frac{P(M=2 and k=k_3)}{P(C=4)}$
+\newline$=\frac{P(M=2 and k=k_3)}{P(M=0 and k=k_5) + P(M=1 and k=k_4) + P(M=2 and k=k_3) + P(M=3 and k=k_2) + P(M=4 and k=k_1)}$
+\newline$=\frac{(1/5)*(1/7)}{(2/7)*(1/5)*2 + (1/7)*(1/5)*3} = 1/7$
 
 \bigskip
 \noindent\textbf{Problem 2} The alphabet is the same as in Problem 1, but now the space of messages consists of all 2-symbol words, so it is $M_{1}$ ={(0,0),(0,1), ...(4,3),(4,4)}. Eve knows that the individual symbols 0,1,2,3,4 have the same probabilities as in Problem 1, and that the two symbols in a word are independent. The encryption is again the shift cipher (recall that this means that the 2-symbol word
