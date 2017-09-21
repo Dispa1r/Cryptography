@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 SEP 2017 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 SEP 2017 15:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -704,35 +704,46 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \c@alphalist2i=\count125
 \c@alphalist2ii=\count126
 \enitdp@alphalist2=\count127
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
  [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
+Overfull \hbox (52.15956pt too wide) in paragraph at lines 95--104
+\OT1/cmr/m/n/12 = []$ 
+ []
 
-(./Assignment3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--104
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
+[3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
+ (./Assignment3.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `Assignment3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 64.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
- 7198 strings out of 492995
- 104159 string characters out of 6132704
- 196953 words of memory out of 5000000
+ 7199 strings out of 492995
+ 104165 string characters out of 6132704
+ 200953 words of memory out of 5000000
  10660 multiletter control sequences out of 15000+600000
  9198 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,5n,30p,488b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,30p,488b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Assignment3.pdf (2 pages, 67155 bytes).
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Assignment3.pdf (3 pages, 92776 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
+ 61 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
