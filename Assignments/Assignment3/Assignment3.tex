@@ -40,10 +40,38 @@ We consider the alphabet A= $\left\{0,1,2,3,4\right\}$ and the space of messages
 	\item (extra credit) Show that the given encryption system is perfectly secure for M, by checking the definition given in class for perfect security ? version 1 (Note: As we did in the proof of the perfect security for  one-time pad, you need to consider an arbitrary distribution on M, because the definition must hold for all possible distributions).
 \end{alphalist}
 \bigskip
-	Solution:
+	Solution: $P (M = m | E_{k}(M) = c) = P(M=m)$
+\indent\begin{tabular}{|c|c|}
+\hline
+$m$ & $P_{m}$ \\
+\hline
+$0$ & $ a$ \\
+$1$ & $ a$ \\
+$2$ & $ b$ \\
+$3$ & $ b$ \\
+$4$ & $ b$ \\
+\hline
+\end{tabular}
+
+\bigskip $P (M = a | c = 1) = \frac{P(M=a) and  (c = 1)}{P (c = 1)} = \frac{P(M=a  and   k = k_{1})}{P (M = a and  k = k_{1})} = 1$
+
+\bigskip Because the keys are always chosen uniformly, each key has probability 1/5..such that:  
+\indent\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$ $ & $k_{1}$ & $k_{2}$ & $k_{3}$ & $k_{4}$ & $k_{5}$ \\
+\hline
+$0$ & $ a/5$ & $ a/5$ & $ a/5$ & $ a/5$ & $ a/5$ \\
+$1$ & $ a/5$ & $ a/5$ & $ a/5$ & $ a/5$ & $ a/5$ \\
+$2$ & $ b/5$ & $ b/5$ & $ b/5$ & $ b/5$ & $ b/5$ \\
+$3$ & $ b/5$ & $ b/5$ & $ b/5$ & $ b/5$ & $ b/5$ \\
+$4$ & $ b/5$ & $ b/5$ & $ b/5$ & $ b/5$ & $ b/5$ \\
+\hline
+\end{tabular}
+
 
 \bigskip
-\noindent\textbf{Problem 2} The alphabet is the same as in Problem 1, but now the space of messages consists of all 2-symbol words, so it is $M_{1}$ ={(0,0),(0,1), ...(4,3),(4,4)}. Eve knows that the individual symbols 0,1,2,3,4 have the same probabilities as in Problem 1, and that the two symbols in a word are independent. The encryption is again the shift cipher (recall that this means that the 2-symbol word $(x_{1}, x_{2})$ is encrypted as the 2-symbol word  $(x_{1}+k, x_{2}+k)$, where k is the key and addition is modulo 5.)
+\noindent\textbf{Problem 2} The alphabet is the same as in Problem 1, but now the space of messages consists of all 2-symbol words, so it is $M_{1}$ ={(0,0),(0,1), ...(4,3),(4,4)}. Eve knows that the individual symbols 0,1,2,3,4 have the same probabilities as in Problem 1, and that the two symbols in a word are independent. The encryption is again the shift cipher (recall that this means that the 2-symbol word
+ $(x_{1}, x_{2})$ is encrypted as the 2-symbol word  $(x_{1}+k, x_{2}+k)$, where k is the key and addition is modulo 5.)
 
 \bigskip
 \newlist{alphalist2}{enumerate}{2}
