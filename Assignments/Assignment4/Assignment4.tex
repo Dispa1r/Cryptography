@@ -65,8 +65,8 @@ $R_3$ & $110011$ & $100110$ \\
 \end{tabular}
 
 \bigskip
-So after 3 rounds, the plaintext 1100 1100 0000 becomes the encrypted message, $R_3L_3$ = 1100 1111 1100 \\
-So after 3 rounds, the plaintext 0101 0100 0000 becomes the encrypted message, $R_3L_3$ = 1001 1000 0000 \\
+So after 3 rounds, the plaintext 1100 1100 0000 becomes the encrypted message, $L_3R_3$ = 1111 0011 0011 \\
+So after 3 rounds, the plaintext 0101 0100 0000 becomes the encrypted message, $L_3R_3$ = 0000 0010 0110 \\
 
 \bigskip In order to get the above results, we need to note a couple of parameters.  \\
 XOR chart:  
@@ -157,7 +157,7 @@ $f(R_2,K_3)  \oplus  L_2$ = 110 000 $ \oplus $ 000 011 = 110 011 \\
 $L_i = R_{i-1} = L_3 = R_2$ = 111 100 \\
 $R_i = L_{i-1} \oplus f(R_{i-1},K_i) = L_2 \oplus f(R_2,K_3) = R_3$ = 110 011 \\
 
-So after 3 rounds, the plaintext 1100 1100 0000 becomes the encrypted message, $R_3L_3$ = 1100 1111 1100 \\
+So after 3 rounds, the plaintext 1100 1100 0000 becomes the encrypted message, $L_3R_3$ = 1111 0011 0011 \\
 
 Now let's do the second plaintext. \\ 
 
@@ -208,7 +208,8 @@ $f(R_2,K_3)  \oplus  L_2$ = 000 011 $ \oplus $ 100 101 = 100 110 \\
 $L_i = R_{i-1} = L_3 = R_2$ = 000 000 \\
 $R_i = L_{i-1} \oplus f(R_{i-1},K_i) = L_2 \oplus f(R_2,K_3) = R_3$ = 100 110 \\
 
-So after 3 rounds, the plaintext 0101 0100 0000 becomes the encrypted message, $R_3L_3$ = 1001 1000 0000 \\
+So after 3 rounds, the plaintext 0101 0100 0000 becomes the encrypted message, $L_3R_3$ = 0000 0010 0110 \\
+ \\
 
 
 \bigskip\noindent\textbf{Problem 2} In this part you are asked to execute the differential attack on Baby DES with 3 rounds that we discussed in class. For that use the above two plaintexts  (i.e., 110011000000 and 010101000000) and the ciphertexts that you have obtained in part (1).  Next run the differential attack using the method discussed in class.  You should, of course, pretend that you do not know the key K.  Show all the steps.  Do all these for the left half and the right half and derive the possibilities for $K_3$. 
