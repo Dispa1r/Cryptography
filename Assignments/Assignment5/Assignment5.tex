@@ -36,8 +36,18 @@ Math 314 \\  %class
 	\item Estimate the time the attack takes (you can ignore the time for all operations other than DES encryptions/decryptions) and explain how you arrived at your estimation.
 \end{alphalist}
 
+ In order to do a meet in the middle attack, we need to make sure that the tables are not too large to create. To do this, we use the known key:
+\newline $D_{K1}(C1) = E_{K2}(E_{K3}(P))$
+\newline $= E_{K2}(C2)$
+\newline\indent Next we build the two tables, $D_{K1'}$ for all $K1'$ and $E_{K2'}$ for all $ K2'$.
+\newline\indent Now, each table will only be $2^{56}$ entries, but will have multiple matches so we do another attack, but with different text chosen, $C1$* and $C2$*, generating another two tables with matches.
+\newline\indent Now the common match found between the four tables is likely to be the key.
+\newline\indent Overall there are four tables needed each with $2^{56}$ entries, so assuming Eve can do $2^{56}$ DES excryptions in 5 hours, the estimated time to do the attack would be $4 * 5 = 20$ hours
+
 \bigskip
 \noindent\textbf{Problem 2}: Let K = 111...111 be the DES key consisting of all 1's.  Show that  $D_{K}(C) = E_{K}(C)$,  for any block C of 64 bits. (Hint: Think of the difference between DES encryption and DES decryption and also of the key scheduling in DES, and then argue that the difference disappears when the key is the above K.)
+
+\bigskip Each key will always be the same and because DES has a feistal structure, doing another encryption with the same key will reverse itself. Therefore in this case, $D_{K}(C) = E_{K}(C)$
 
 \bigskip
 \indent\textbf{Modes of operation exercises and AES exercises can be seen in original document FOR practice, solutions are not to be turned in.}
