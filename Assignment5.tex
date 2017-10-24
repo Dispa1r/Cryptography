@@ -1,0 +1,55 @@
+\documentclass[12pt,letterpaper,final]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{seqsplit}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\renewcommand\qedsymbol{$\blacksquare$}
+\usepackage{enumerate}
+
+
+\begin{document}
+\fbox{
+\vbox{
+\begin{flushleft}
+Tanner Krebs, Gerardo Lopez, William Thornton \\  % authors' names
+Math 314 \\  %class
+10/05/17 \\  % date
+\end{flushleft}
+\center{\Large{\textbf{COSC/MATH - 314}}}
+\center{\Large{\textbf{Assignment 5}}}
+}  % end vbox
+} % end fbox
+
+\vline
+
+
+\noindent\textbf{Problem 1}: Alice and Bob are using 3-DES with 3 keys. That is the encryption algorithm is $C = E_{K1} (E_{K2} (E_{K3} (P)))$ with the keys K1, K2, and K3 having 56 bits each. Suppose that Eve somehow knows K3 and also suppose that Eve can do $2^{56}$ DES encryptions in 5 hours. 
+\newlist{alphalist}{enumerate}{1}
+\setlist[alphalist,1]{label=\textbf{(\alph*.)}}
+\begin{alphalist}
+	\item Describe a meet-in-the-middle type of attack that Eve can mount in an efficient way to determine K1 and K2. You need to describe the 2  tables that Eve has to construct, specifying their entries and how large each table is. (Hint: For the meet-in-the-middle attack for 2-DES in which $C = E_{K2} (E_{K1} (P))$, we have described the 2 tables as follows. Table 1: Contains $D_{K2}(C)$ for all possible K2. Table 1 has size $2^{56}$ because there are these many K2's. Table 2: Contains $E_{K1}(P)$ for all possible K1. Table 1 has size $2^{56}$ because there are these many K1's. You need to make a similar description.)
+	\item Estimate the time the attack takes (you can ignore the time for all operations other than DES encryptions/decryptions) and explain how you arrived at your estimation.
+\end{alphalist}
+
+ In order to do a meet in the middle attack, we need to make sure that the tables are not too large to create. To do this, we use the known key:
+\newline $D_{K1}(C1) = E_{K2}(E_{K3}(P))$
+\newline $= E_{K2}(C2)$
+\newline\indent Next we build the two tables, $D_{K1'}$ for all $K1'$ and $E_{K2'}$ for all $ K2'$.
+\newline\indent Now, each table will only be $2^{56}$ entries, but will have multiple matches so we do another attack, but with different text chosen, $C1$* and $C2$*, generating another two tables with matches.
+\newline\indent Now the common match found between the four tables is likely to be the key.
+\newline\indent Overall there are four tables needed each with $2^{56}$ entries, so assuming Eve can do $2^{56}$ DES excryptions in 5 hours, the estimated time to do the attack would be $4 * 5 = 20$ hours
+
+\bigskip
+\noindent\textbf{Problem 2}: Let K = 111...111 be the DES key consisting of all 1's.  Show that  $D_{K}(C) = E_{K}(C)$,  for any block C of 64 bits. (Hint: Think of the difference between DES encryption and DES decryption and also of the key scheduling in DES, and then argue that the difference disappears when the key is the above K.)
+
+\bigskip Each key will always be the same and because DES has a feistal structure, doing another encryption with the same key will reverse itself. Therefore in this case, $D_{K}(C) = E_{K}(C)$
+
+\bigskip
+\indent\textbf{Modes of operation exercises and AES exercises can be seen in original document FOR practice, solutions are not to be turned in.}
+
+\end{document}
