@@ -1,0 +1,70 @@
+\documentclass[12pt,letterpaper,final]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{seqsplit}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\renewcommand\qedsymbol{$\blacksquare$}
+\usepackage{enumerate}
+
+
+\begin{document}
+\fbox{
+\vbox{
+\begin{flushleft}
+Tanner Krebs, Gerardo Lopez, William Thornton \\  % authors' names
+Math 314 \\  %class
+Due: 11/0217 \\  % date
+\end{flushleft}
+\center{\Large{\textbf{COSC/MATH - 314}}}
+\center{\Large{\textbf{Assignment 7}}}
+}  % end vbox
+} % end fbox
+
+\vline
+
+
+\noindent\textbf{Problem 1}: 
+ 
+ \newlist{alphalist}{enumerate}{1}
+\setlist[alphalist,1]{label=\textbf{(\alph*.)}}
+\begin{alphalist}
+	\item Find an integer x between 0 and 69 that satisfies simultaneously x = 2 (mod 7) and x = 3 (mod 10). 		(Note: by the Chinese Remainder Theorem, we know that there is such an integer.)
+	\item Find another integer y (different from the x from (a)) such that  y = 2  (mod 7) and  y = 3 (mod 10).
+\end{alphalist}
+
+\bigskip
+\noindent\textbf{Problem 2}:  Use the repeated squaring method to calculate each of the following (show the main steps for each calculation): $3^{7} (mod 12)$,  $16^{10} (mod 230)$,  $5^{14} (mod 26)$,  $4^{22} (mod 11)$,  $3^{65} (mod 71)$.
+
+
+\bigskip
+
+\bigskip
+\noindent\textbf{Problem 3}: Use Fermat?s Little Theorem (and other methods if you need) to calculate the following (all moduli are prime numbers):  $99^{101} (mod 101)$,  $94^{66} (mod 67)$,  $4968732^{7540} (mod 7541)$,  $65^{144} (mod 73)$,  $65^{143} (mod 73)$.
+
+\bigskip
+
+
+
+
+\bigskip
+\noindent\textbf{Problem 4}: Show that $2^{56} + 3^{56}$ is divisible by 17. 
+
+\bigskip
+\noindent\textbf{Problem 5}: Find three different integers a, b, and c such that $2^{a} = 2^{b} = 2^{c} = 1$ (mod 19).
+
+\bigskip
+\noindent\textbf{Problem 6}:
+\newlist{alphalist2}{enumerate}{1}
+\setlist[alphalist2,1]{label=\textbf{(\alph*.)}}
+\begin{alphalist2}
+	\item Show that 2 is a primitive root (mod 11)
+	\item Find all natural numbers x that satisfy the equation $2^{3x} = 2$ (mod 11). (Note:  There are infinitely 	many natural numbers that satisfy the given equation. "Find all" means to present a description of all of them.)
+
+\end{alphalist2}
+
+\end{document}
