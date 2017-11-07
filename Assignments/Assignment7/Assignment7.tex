@@ -1,3 +1,4 @@
+
 \documentclass[12pt,letterpaper,final]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -38,8 +39,36 @@ Due: 11/0217 \\  % date
 \end{alphalist}
 
 \bigskip
+ a) $x = 2(mod7)$ and $x = 3(mod 10)$
+\newline $x = 3(mod 10)$, so $x = 3, 13, 23, 33, 43, 53, 63$
+\newline Now, take each number mod 7 find $x = 2(mod 7)$
+\newline $3, 6, 2$, found x = 2(mod 7)
+\newline $x = 23$
+
+ b) $y = 23 + 70$, $y = 93$
+
+\bigskip
 \noindent\textbf{Problem 2}:  Use the repeated squaring method to calculate each of the following (show the main steps for each calculation): $3^{7} (mod 12)$,  $16^{10} (mod 230)$,  $5^{14} (mod 26)$,  $4^{22} (mod 11)$,  $3^{65} (mod 71)$.
 
+ a)  $3^{7} (mod 12)$
+\newline $3, 3^{2} = 9, 3^{4} = 81=9,3^{8} =  9$
+\newline $3^{7} = 3^{4} * 3^{3} = 9 * 3 = 3$
+
+ b)  $16^{10} (mod 230)$
+\newline Squaring: $16, 16^{2} = 16, 16^{4} = 16$, so on
+\newline $16^{10} = 16^{8} * 16^{2} = 16*16 = 16$
+
+ c)  $5^{14} (mod 26)$
+\newline $5, 5^{2} = 25, 5^{4} = 625=1, 5^{8} = 1, 5^{16} = 1$
+\newline $5^{14} = 5^{8} * 5^{4} * 5^{2} = 25$
+
+ d) $4^{22} (mod 11)$
+\newline $4, 4^{2} = 5, 4^{4} = 3, 4^{8} = 9, 4^{16} = 4$
+\newline $4^{22} = 4^{16} *  4^{4} *  4^{2} = 5$
+
+ e) $3^{65} (mod 71)$
+\newline $3, 3^{2} = 9, 3^{4} = 10, 3^{8} = 29, 3^{16} = 60, 3^{32} = 50, 3^{64} = 15$
+\newline $3^{65} = 3^{64} * 3 = 45$
 
 \bigskip
 
@@ -48,14 +77,43 @@ Due: 11/0217 \\  % date
 
 \bigskip
 
+$a^{p-1} = 1(mod p)$
+ a) $99^{101}(mod 101)$
+\newline $99^{100} = 1(mod 101)$
+\newline $99^{101} = 99^{100} * 99 = 99$
+
+ b) $94^{66} (mod 67)$
+\newline $94^{66} = 1 (mod 67)$
+
+ c)  $4968732^{7540} (mod 7541)$
+\newline  $4968732^{7540} = 1 (mod 7541)$
+
+ d) $65^{144} (mod 73)$
+\newline $65^{72} = 1 (mod 73)$
+\newline $65^{144} = 1 * 1 = 1  (mod 73)$
+
+ e) $65^{143} (mod 73)$
+\newline $65^{143} = 65^{72} * 65^{71} (mod 73)$
+\newline $65^{71} = 65^{64} * 65^{4} * 65^{2} = 9$
+\newline $65^{143} = 1 * 9 = 9(mod 73)$
 
 
 
 \bigskip
 \noindent\textbf{Problem 4}: Show that $2^{56} + 3^{56}$ is divisible by 17. 
 
+ $2^{56} + 3^{56} = 0 (mod 17)$
+\newline $2^{56} = 2^{32} * 2^{16} * 2^{8} = 1$
+\newline $3^{56} = 3^{32} * 3^{16} * 3^{8} = 16$
+\newline $1 + 16 = 0 (mod 17)$, so it is divisble by 17
+
 \bigskip
 \noindent\textbf{Problem 5}: Find three different integers a, b, and c such that $2^{a} = 2^{b} = 2^{c} = 1$ (mod 19).
+
+ $2^{18} = 1 (mod 19)$, by Fermat's Little Theorem, a = 18
+\newline $2^{36} = 1(mod 19), = 1*1$, b = 36
+\newline $2^{54} = 1(mod 19), = 1*1*1$, c = 54
+
 
 \bigskip
 \noindent\textbf{Problem 6}:
@@ -66,5 +124,13 @@ Due: 11/0217 \\  % date
 	\item Find all natural numbers x that satisfy the equation $2^{3x} = 2$ (mod 11). (Note:  There are infinitely 	many natural numbers that satisfy the given equation. "Find all" means to present a description of all of them.)
 
 \end{alphalist2}
+
+a) 2 is a primitive root mod 11:
+\newline $2, 2^{2} = 4, 2^{3} = 8, 2^{4} = 5, 2^{5} = 10, 2^{6} = 9, 2^{7} = 7, 2^{8} = 3, 2^{9} = 6, 2^{10} = 1, 2^{11} = 2, 2^{12} = 4$
+\newline The pattern will repeat, as $2^{11} = 2$, ($g^{j} = g^{k}$ iff $j=k (mod p - 1)$)
+
+b) $2^{3x} = 2(mod 11)$
+\newline $2^{3} = 8, 2^{6} = 9, 2^{9} = 6,  2^{12} = 4,  2^{15} = 10,  2^{18} = 3,  2^{21} = 2,  2^{24} = 5,  2^{27} = 7,  2^{30} = 1,  2^{33} = 8$, after this point will repeat as $2^{33} = 2^{3}$
+\newline Therefore, every number  7 + 10x will satisfy the equation ($2^{21} = 2$, pattern will repeat every 10 numbers), x is a positive integer
 
 \end{document}
