@@ -1,0 +1,51 @@
+
+\documentclass[12pt,letterpaper,final]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{seqsplit}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\renewcommand\qedsymbol{$\blacksquare$}
+\usepackage{enumerate}
+
+
+\begin{document}
+\fbox{
+\vbox{
+\begin{flushleft}
+Tanner Krebs, Gerardo Lopez, William Thornton \\  % authors' names
+Math 314 \\  %class
+Due: 11/28/17 \\  % date
+\end{flushleft}
+\center{\Large{\textbf{COSC/MATH - 314}}}
+\center{\Large{\textbf{Assignment 9}}}
+}  % end vbox
+} % end fbox
+
+\vline
+
+
+\noindent\textbf{Problem 1}: If a number n is composite but in the Miller-Rabin algorithm Test (n,a) outputs "n is probably prime" (see my notes, or the textbook page 178), then a is said to be a false Miller-Rabin witness for n. Show that 2 is a false Miller-Rabin witness strong for 2047.
+
+\bigskip
+\noindent\textbf{Problem 2}:  Let $p = 101$ (note that 101 is a prime number). It is known that 2 is a primitive root of 101. For any number n in the range ${1,2, ... , 100}$, we denote by $L_{2}(n)$ the value $k \epsilon {(1,2, ... , 100}$ such that $2^{k} = n$ (mod 101) (i.e., $L_{n}$ is the discrete log of n mod 101).
+\newlist{alphalist}{enumerate}{1}
+\setlist[alphalist,1]{label=\textbf{(\alph*.)}}
+\begin{alphalist}
+	\item\indent What is $L_{2}(1)$? Justify your answer. (Note: The answer $k = 0$ is not valid, because k has to be in the set ${(1,2, ... , 100}$).
+	\item\indent Using the fact the $L_{2}(3) = 69$, determine $L_{2}(9)$
+\end{alphalist}
+
+
+\bigskip
+\noindent\textbf{Problem 3}: In the El Gamal cryptosystem, Alice and Bob use $p = 17$ and $a = 3$. Bob choses his secret to be $a = 6$, so $\beta = 15$. Alice sends the ciphertext $(r,t) = (7,6)$. Determine the plaintext m.
+
+
+\bigskip
+\noindent\textbf{Problem 4}: Exercise 7, page 215 in the texbook.
+
+\end{document}
