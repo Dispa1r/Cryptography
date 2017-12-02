@@ -1,0 +1,55 @@
+\documentclass[12pt,letterpaper,final]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{seqsplit}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\renewcommand\qedsymbol{$\blacksquare$}
+\usepackage{enumerate}
+
+
+\begin{document}
+\fbox{
+\vbox{
+\begin{flushleft}
+Tanner Krebs, Gerardo Lopez, William Thornton \\  % authors' names
+Math 314 \\  %class
+Due: 12/5/17 \\  % date
+\end{flushleft}
+\center{\Large{\textbf{COSC/MATH - 314}}}
+\center{\Large{\textbf{Assignment 10}}}
+}  % end vbox
+} % end fbox
+
+\vline
+
+
+\bigskip
+\noindent\textbf{Problem 1}: Let \textit{p} be a prime that has 1024 bits and let a be a primitive root of p.
+\newline Let $h(x) = a^{x}$ (mod p). We analyze if $h$ is a good hash function.
+\newlist{alphalist}{enumerate}{1}
+\setlist[alphalist,1]{label=\textbf{(\alph*.)}}
+\begin{alphalist}
+	\item\indent Is $h(x)$ preimage resistant? Say YES or NO and justify your claim.
+	\item\indent Is $h(x)$ weakly collision resistant? Say YES or NO and justify your claim.
+\end{alphalist}
+
+\bigskip
+
+\noindent\textbf{Problem 2}: In a family of five, what is the probability that no two people are born in the same month? Explain how you have computed the probability. 
+\bigskip
+
+\noindent\textbf{Problem 3}: Bob is using the El Gamal signature scheme. His public key is $(p, \alpha, \beta)$ = $(97, 23, 15)$ and his secret key is $a = 67$.
+\newlist{alphlist}{enumerate}{1}
+\setlist[alphlist,1]{label=\textbf{(\alph*.)}}
+\begin{alphlist}
+	\item\indent Calculate Bob's signature for message $m = 17$ with ephemeral random $k = 31$.
+	\item\indent You receive allegedly from Bob the signed message $(m_{1}, r_{1}, s_{1})$ = $(22, 37, 33)$ and $m_{2}, r_{2}, s_{2}$ = $(82, 13, 65)$. Verify is these messages originate from Bob.
+\end{alphlist}
+
+
+\end{document}
