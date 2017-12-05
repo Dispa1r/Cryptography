@@ -64,8 +64,19 @@ $\frac{95040}{248832} = 55/144 = 38.2\%$.
 \setlist[alphlist,1]{label=\textbf{(\alph*.)}}
 \begin{alphlist}
 	\item\indent Calculate Bob's signature for message $m = 17$ with ephemeral random $k = 31$.
-	\item\indent You receive allegedly from Bob the signed message $(m_{1}, r_{1}, s_{1})$ = $(22, 37, 33)$ and $m_{2}, r_{2}, s_{2}$ = $(82, 13, 65)$. Verify is these messages originate from Bob.
-\end{alphlist}
+	\newline
+	\newline {\bf Solution:} Compute $r = \alpha^{k}$ (mod p). $r = 23^{31}$ (mod 97). $ r = 87$.
+	\newline\indent Compute $s = k^{-1}(m - ar)$(mod (p-1)). $s = 31^{-1}(17 - (67\cdot87))$ (mod 97 -1).
+	\item\indent You receive allegedly from Bob the signed message $(m_{1}, r_{1}, s_{1})$ = $(22, 37, 33)$ and $m_{2}, r_{2}, s_{2}$ = $(82, 13, 65)$. Verify if these messages originate from Bob.
+	\newline\indent {\bf Solution:} Compute $v_{1} = \beta^{r} \cdot r^{s}$ (mod p) and $v_{2} = \alpha^{m}$ (mod p).
+	\newline For message $(m_{1}, r_{1}, s_{1})$ = $(22, 37, 33)$
+	\newline $v_{1} = \beta^{r} \cdot r^{s}$ (mod p), $15^{37} \cdot 37^{33}$ (mod 97) = 49
+	\newline $v_{2} = \alpha^{m}$ (mod p), $23^{22}$ (mod 97) = 49
+	\newline For Message $m_{2}, r_{2}, s_{2}$ = $(82, 13, 65)$
+	\newline $v_{1} = \beta^{r} \cdot r^{s}$ (mod p), $15^{13} \cdot 13^{65}$ (mod 97) = 54
+	\newline $v_{2} = \alpha^{m}$ (mod p), $23^{82}$ (mod 97) = 32
+	\newline The message  $m_{2}, r_{2}, s_{2}$ = $(82, 13, 65)$ did not originate(not valid) from Bob because $v_{1} \neq v_{2}$.
+	\end{alphlist}
 
 
 \end{document}
