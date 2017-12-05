@@ -35,12 +35,28 @@ Due: 12/5/17 \\  % date
 \setlist[alphalist,1]{label=\textbf{(\alph*.)}}
 \begin{alphalist}
 	\item\indent Is $h(x)$ preimage resistant? Say YES or NO and justify your claim.
+	\newline
+	\newline {\bf Solution}:
 	\item\indent Is $h(x)$ weakly collision resistant? Say YES or NO and justify your claim.
+	\newline
+	\newline {\bf Solution}: \textit{h} is {\bf not} strongly collision-free because we can easily find $x_{i}, x_{j} \ni h(x_{i}) = h(x_{j})$ if we know a message $x_{j}$. This can be accomplished by using Fermat's Little Theorem. Since $p   \chi\alpha, \alpha^{p-q} \equiv 1$ (mod p). So,
+\begin{center} 
+$h(x_{i}) \equiv \alpha^{{x}_{i} }\equiv \alpha^{{x}_{i}} \cdot \alpha^{p-1} \equiv \alpha^{{x}_{i}+{p-1}}$ (mod p)
+\end{center}
+If we let $x_{j} = x_{i} + p -1$, we get $h(x_{i}) = h(x_{j})$ for $x_{i} \neq x_{j}$.
 \end{alphalist}
 
 \bigskip
 
 \noindent\textbf{Problem 2}: In a family of five, what is the probability that no two people are born in the same month? Explain how you have computed the probability. 
+\newline
+\newline {\bf Solution:} $P(E) = (1 - \frac{1}{12})(1- \frac{2}{12})(1 -\frac{3}{12})(1 - \frac{4}{12}) \approx 38.2\%$. Furthermore, there are 12 options for the month of birth for the first person. We want the next person to have a different month of birth so there are 11 possibilities for that person. 10 possibilities for the third person. 9 for the fourth. 8 for the fifth. 
+\begin{center}
+So, $(12 \cdot 11 \cdot 10 \cdot 9 \cdot 8) = 95040$. 
+$12^{5} = 248832$, ways to choose five peoples months of birth.
+$\frac{95040}{248832} = 55/144 = 38.2\%$.
+\end{center}
+
 \bigskip
 
 \noindent\textbf{Problem 3}: Bob is using the El Gamal signature scheme. His public key is $(p, \alpha, \beta)$ = $(97, 23, 15)$ and his secret key is $a = 67$.
