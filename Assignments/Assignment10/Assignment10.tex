@@ -35,8 +35,8 @@ Due: 12/5/17 \\  % date
 \setlist[alphalist,1]{label=\textbf{(\alph*.)}}
 \begin{alphalist}
 	\item\indent Is $h(x)$ preimage resistant? Say YES or NO and justify your claim.
-	\newline
-	\newline {\bf Solution}:
+	\newline 
+	\newline {\bf Solution}: Yes, given \textit{h} it is hard to find a message having that digest $H(x) = \textit{h}$.
 	\item\indent Is $h(x)$ weakly collision resistant? Say YES or NO and justify your claim.
 	\newline
 	\newline {\bf Solution}: \textit{h} is {\bf not} strongly collision-free because we can easily find $x_{i}, x_{j} \ni h(x_{i}) = h(x_{j})$ if we know a message $x_{j}$. This can be accomplished by using Fermat's Little Theorem. Since $p   \chi\alpha, \alpha^{p-q} \equiv 1$ (mod p). So,
@@ -66,7 +66,8 @@ $\frac{95040}{248832} = 55/144 = 38.2\%$.
 	\item\indent Calculate Bob's signature for message $m = 17$ with ephemeral random $k = 31$.
 	\newline
 	\newline {\bf Solution:} Compute $r = \alpha^{k}$ (mod p). $r = 23^{31}$ (mod 97). $ r = 87$.
-	\newline\indent Compute $s = k^{-1}(m - ar)$(mod (p-1)). $s = 31^{-1}(17 - (67\cdot87))$ (mod 97 -1).
+	\newline\indent Compute $s = k^{-1}(m - ar)$(mod (p-1)). $s = 31^{-1}(17 - (67\cdot87))$ (mod 97 -1) = 44.
+	\newline Signature is the pair $(87,44)$. Signed message is $( 17, (87, 44)$.
 	\item\indent You receive allegedly from Bob the signed message $(m_{1}, r_{1}, s_{1})$ = $(22, 37, 33)$ and $m_{2}, r_{2}, s_{2}$ = $(82, 13, 65)$. Verify if these messages originate from Bob.
 	\newline\indent {\bf Solution:} Compute $v_{1} = \beta^{r} \cdot r^{s}$ (mod p) and $v_{2} = \alpha^{m}$ (mod p).
 	\newline For message $(m_{1}, r_{1}, s_{1})$ = $(22, 37, 33)$
