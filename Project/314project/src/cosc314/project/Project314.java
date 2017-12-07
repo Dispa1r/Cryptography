@@ -2,12 +2,6 @@
 public class Project314 {
 
   public static void main (String[] args) {
-    System.out.println("For DLP:");
-    //input for 3^x = 12 (mod 17)
-    System.out.println("x is: " + solveDLP(17, 3, 12));//answer is 7899
-    System.out.println("For num conversion:");
-    System.out.println("The result of numToText(3781): " + numToText(17575));
-    
     
     int[] pairs = {3781, 14409,   31552, 3930,   27214, 15442,  5809, 30274,    
 5400, 31486   ,19936, 721    ,27765, 29284  ,29820, 7710,    
@@ -123,12 +117,6 @@ public class Project314 {
     System.out.println("x is: " + x);
     return getCharacter(x) + getCharacter(y) + getCharacter(z);
   }
-  
-  //Returns the number block using 3 letters
-  /*public static int textToNum(char a, char b, char c) {
-    int block = getCharCode(a) * 26^2 + getCharCode(b) * 26 + getCharCode(c);
-    return block;
-  }*/
   
   //Gets the integer value that corresponds with a character (a = 0, b = 1, etc...)
   public static String getCharacter(int num) {
