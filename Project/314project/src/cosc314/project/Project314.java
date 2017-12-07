@@ -35,22 +35,29 @@ public class Project314 {
     String pt = "";
     int j = 0;
     for (int i=0; i < pairs.length/2; i++) {
+      //Current pair
       int r = pairs[j];
       int t = pairs[j+1];
       int a = solveDLP(31847, 5, 18074);
       
+      //Find s
       int s = modInverse(r, 31847);
       s = reduceByMod(s, 31847);
       
+      //Find r^-1
       int rToA = ModEx(s, a, 31847);
       rToA = reduceByMod(rToA, 31847);
+      //Find the plaintext, finshed decrypting this pair
       int m = t * rToA;
       m = reduceByMod(m, 31847);
       
+      //Convert to text, add to pt string
       pt += numToText(m);
       
+      //j keeps track of the pair
       j+=2;
     }
+    
     System.out.println(pt);
   }
   
@@ -138,13 +145,18 @@ public class Project314 {
   return x1;
 }
    
+   //Modular exponentiation
    public static int ModEx(int a, int b, int c) {
      long x=1;
      long y=a;
+     //while there is more to the exponent
      while(b>0) {
+       //If the exponent is odd
        if (b%2 == 1) {
+         //multiply and reduce only once
          x = (x*y)%c;
        }
+       //Square and reduce by mod c
        y = (y*y)%c;
        b /= 2;
      }
