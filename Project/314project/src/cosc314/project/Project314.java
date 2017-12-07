@@ -16,7 +16,7 @@ public class Project314 {
   public static int solveDLP(int q, int a, int y) {
     int x = a;
     int i = 1;
-    while (x != y && i < 8000) {
+    while (x != y) {
       x = x * a;
       x = reduceByMod(x, q);
       i++;
