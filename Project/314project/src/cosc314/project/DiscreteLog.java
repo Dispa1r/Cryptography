@@ -11,7 +11,7 @@ public class DiscreteLog {
       			x = reduceByMod(x, q);
       			i++;
     		}
-    		return i;
+    		return i-1;
 	}
 	
 	//a is the number, b is the mod
