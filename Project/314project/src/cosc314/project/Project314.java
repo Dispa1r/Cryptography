@@ -21,7 +21,7 @@ public class Project314 {
       x = reduceByMod(x, q);
       i++;
     }
-    return i-1;
+    return i;
   }
   
   //a is the number, b is the mod
