@@ -4,14 +4,14 @@ public class DiscreteLog {
 
 	//q is prime, a is a primitive root of q, y is a residue mod q
 	public static int DiscreteLog(int q, int a, int y) {
-		int x = -1;
+    		int x = a;
     		int i = 1;
-    		while (x != y) {
-      			x = (int) Math.pow(a, i);
+    		while (x != y && i < 8000) {
+      			x = x * a;
       			x = reduceByMod(x, q);
       			i++;
     		}
-    		return i-1;
+    		return i;
 	}
 	
 	//a is the number, b is the mod
