@@ -37,6 +37,7 @@ public class Project314 {
       28327, 19237  ,15313, 28649};
 
     
+    //Loop for decrypting and displaying
     String pt = "";
     int j = 0;
     for (int i=0; i < pairs.length/2; i++) {
@@ -102,6 +103,7 @@ public class Project314 {
       c = a / b;
       c = a - (c * b);
     }
+    if (a == b) return 0;
     return c;
   }
   
