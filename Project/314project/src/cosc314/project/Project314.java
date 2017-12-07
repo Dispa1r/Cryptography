@@ -1,24 +1,27 @@
-import java.util.*;
-
 public class Project314 {
 
   public static void main (String[] args) {
     System.out.println("For DLP:");
-    System.out.println("x is: " + solveDLP(17, 3, 12));
+    //input for 3^x = 12 (mod 17)
+    System.out.println("x is: " + solveDLP(31847, 5, 18074));
     System.out.println("For num conversion:");
     System.out.println("The result of numToText(3781): " + numToText(17575));
   }
   
-  //q is a prime, a is a primitive root of q, y is a residue mod q
+  
+  
+  
+  
+  //q is a prime (p in question), a is a primitive root of q (alpha in question), y is a residue mod q (beta in question)
   public static int solveDLP(int q, int a, int y) {
-    int x = -1;
+    int x = a;
     int i = 1;
-    while (x != y) {
-      x = (int) Math.pow(a, i);
+    while (x != y && i < 8000) {
+      x = x * a;
       x = reduceByMod(x, q);
       i++;
     }
-    return i;
+    return i-1;
   }
   
   //a is the number, b is the mod
