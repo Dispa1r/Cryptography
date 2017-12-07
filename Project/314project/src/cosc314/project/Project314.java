@@ -142,7 +142,7 @@ public class Project314 {
 			q = a / m;
 			t = m;
 
-			// m is remainder now, process same as
+			// m is remainder 
 			// Euclid's Algorithm
 			m = a % m;
 			a = t;
@@ -179,7 +179,7 @@ public class Project314 {
         Project314 repeatedSquaring = new Project314();
  
         /** Accept n , k **/
-        System.out.println("\nEnter n and k of (N ^ K)");
+        System.out.println("\nEnter n, k of (N ^ K)");
         double n = scan.nextDouble();
         int k = scan.nextInt();
         double result = repeatedSquaring.ModularExp(n, k);
